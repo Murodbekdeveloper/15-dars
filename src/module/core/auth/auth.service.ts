@@ -29,6 +29,7 @@ export class AuthService {
       data: {
         ...registerAuthDto,
         password: hashedPassword,
+        email: registerAuthDto.email
       },
     });
     const token = await this.jwtService.signAsync({ user_id: createUser.id });
