@@ -17,7 +17,7 @@ export class PrismaService
   private readonly logger = new Logger(PrismaClient.name);
   async onModuleInit() {
     await this.$connect();
-    this.logger.log('DATABASE CONNECT')
+    this.logger.log('DATABASE CONNECTED')
   }
   async onModuleDestroy() {
     await this.$disconnect();
